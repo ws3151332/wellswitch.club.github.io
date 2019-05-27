@@ -9,7 +9,7 @@
         * { padding: 0; margin: 0; }
         body { font-family: verdana; font-size: 12px; }
         .content { width: 550px; margin: 20px auto; }
-        .content h1 { font-family: 'å¾®è½¯é›…é»‘'; font-size: 18px; padding-bottom: 5px; }
+        .content h1 { font-family: 'Î¢ÈíÑÅºÚ'; font-size: 18px; padding-bottom: 5px; }
         table { width: 100%; }
         th, td { padding: 6px 0px; text-align: center; width:auto;}
         th { background-color: #1283af; color: #ffffff; }
@@ -23,7 +23,7 @@
     </style>
     <script>
         window.onload=function(){
-            //é¡µé¢æ ‡ç­¾å˜é‡
+            //Ò³Ãæ±êÇ©±äÁ¿
             blockTable = document.getElementById("blocks");
             preSpan = document.getElementById("spanPre");
             firstSpan = document.getElementById("spanFirst");
@@ -32,9 +32,9 @@
             pageNumSpan = document.getElementById("spanTotalPage");
             currPageSpan = document.getElementById("spanPageNum");
  
-            numCount = document.getElementById("blocks").rows.length - 1;       //å–tableçš„è¡Œæ•°ä½œä¸ºæ•°æ®æ€»æ•°é‡ï¼ˆå‡å»æ ‡é¢˜è¡Œ1ï¼‰
+            numCount = document.getElementById("blocks").rows.length - 1;       //È¡tableµÄĞĞÊı×÷ÎªÊı¾İ×ÜÊıÁ¿£¨¼õÈ¥±êÌâĞĞ1£©
             columnsCounts = blockTable.rows[0].cells.length;
-            pageCount = 5;//æ§åˆ¶æ¯é¡µæ˜¾ç¤ºæ¡æ•°
+            pageCount = 5;//¿ØÖÆÃ¿Ò³ÏÔÊ¾ÌõÊı
             pageNum = parseInt(numCount/pageCount);
             if(0 != numCount%pageCount){
                 pageNum += 1;
@@ -43,21 +43,21 @@
             firstPage();
         };
         $(function(){
-            //å›è½¦äº‹ä»¶ç»‘å®š
+            //»Ø³µÊÂ¼ş°ó¶¨
             $('#myInput').bind('keyup', function(event) {
                 if (event.keyCode == "13") {
-                    // å£°æ˜å˜é‡
+                    // ÉùÃ÷±äÁ¿
                     var input, filter, table, tr, td, i,tds;
                     input = document.getElementById("myInput");
                     filter = input.value.toUpperCase();
                     table = document.getElementById("blocks");
                     tr = table.getElementsByTagName("tr");
-                    //if(input.value!="" && input.value != null){//æ§åˆ¶æ¨¡ç³Šæœç´¢æ—¶ æ˜¯å¦å…è®¸ç©ºæ ¼æœç´¢
+                    //if(input.value!="" && input.value != null){//¿ØÖÆÄ£ºıËÑË÷Ê± ÊÇ·ñÔÊĞí¿Õ¸ñËÑË÷
                         for(var a =0; a<tr.length;a++){
                             tds = tr[a].getElementsByTagName("td");
                             for (var i =0;i< tds.length ; i++) {
                                 var thval = tds[i].outerText;
-                                if (thval.toUpperCase().indexOf(filter)!=-1){//ä¸å­˜åœ¨æ—¶è¿”å›-1   !=-1å°±æ˜¯å­˜åœ¨
+                                if (thval.toUpperCase().indexOf(filter)!=-1){//²»´æÔÚÊ±·µ»Ø-1   !=-1¾ÍÊÇ´æÔÚ
                                     tr[a].style.display = "";
                                     break;
                                 }else{
@@ -65,7 +65,7 @@
                                 }
                             }
                         }
-                    //}//æ§åˆ¶æ¨¡ç³Šæœç´¢æ—¶ æ˜¯å¦å…è®¸ç©ºæ ¼æœç´¢
+                    //}//¿ØÖÆÄ£ºıËÑË÷Ê± ÊÇ·ñÔÊĞí¿Õ¸ñËÑË÷
                 }
             });
         });
@@ -73,18 +73,18 @@
 </head>
 <body align="center">
 <div class="container zd_one" align="center" style="height:300px;">
-    <h2 align="left" class="zd_two">å‘˜å·¥ä¿¡æ¯</h2>
-    <input type="text" id="myInput" placeholder="æœç´¢..."/><!--  onblur="myFunction()" -->
-    <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;å›è½¦é”®è¿›è¡Œæœç´¢~</span>
+    <h2 align="left" class="zd_two">Ô±¹¤ĞÅÏ¢</h2>
+    <input type="text" id="myInput" placeholder="ËÑË÷..."/><!--  onblur="myFunction()" -->
+    <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»Ø³µ¼ü½øĞĞËÑË÷~</span>
     <table id="blocks" class="table table-striped" style="margin-top:5px">
         <thead><!--summary="user infomation table" id="tableSort"-->
             <tr>
-                <th onclick="$.sortTable.sort('blocks',0)" style="cursor: pointer;">ä¼šå‘˜ID</th>
-                <th onclick="$.sortTable.sort('blocks',1)" style="cursor: pointer;">ä¼šå‘˜å</th>
-                <th onclick="$.sortTable.sort('blocks',2)" style="cursor: pointer;">é‚®ç®±</th>
-                <th onclick="$.sortTable.sort('blocks',3)" style="cursor: pointer;">ä¼šå‘˜ç»„</th>
-                <th onclick="$.sortTable.sort('blocks',4)" style="cursor: pointer;">åŸå¸‚</th>
-                <th onclick="$.sortTable.sort('blocks',5)" style="cursor: pointer;">æ³¨å†Œæ—¶é—´</th>
+                <th onclick="$.sortTable.sort('blocks',0)" style="cursor: pointer;">»áÔ±ID</th>
+                <th onclick="$.sortTable.sort('blocks',1)" style="cursor: pointer;">»áÔ±Ãû</th>
+                <th onclick="$.sortTable.sort('blocks',2)" style="cursor: pointer;">ÓÊÏä</th>
+                <th onclick="$.sortTable.sort('blocks',3)" style="cursor: pointer;">»áÔ±×é</th>
+                <th onclick="$.sortTable.sort('blocks',4)" style="cursor: pointer;">³ÇÊĞ</th>
+                <th onclick="$.sortTable.sort('blocks',5)" style="cursor: pointer;">×¢²áÊ±¼ä</th>
             </tr>
         </thead>
         <tbody>
@@ -92,96 +92,96 @@
                 <td>15632</td>
                 <td>sdfhHjg</td>
                 <td>este@126.com</td>
-                <td>é“¶å¡ä¼šå‘˜</td>
-                <td>æ²³å—</td>
+                <td>Òø¿¨»áÔ±</td>
+                <td>ºÓÄÏ</td>
                 <td>2017-06-12</td>
             </tr>
             <tr>
                 <td>3659</td>
                 <td>mnxbs</td>
                 <td>sloea@659.com</td>
-                <td>é“‚é‡‘ä¼šå‘˜</td>
-                <td>ä¸Šæµ·</td>
+                <td>²¬½ğ»áÔ±</td>
+                <td>ÉÏº£</td>
                 <td>2015-06-23</td>
             </tr>
             <tr>
                 <td>126</td>
                 <td>webw3c</td>
                 <td>este@126.com</td>
-                <td>æ™®é€šä¼šå‘˜</td>
-                <td>åŒ—äº¬</td>
+                <td>ÆÕÍ¨»áÔ±</td>
+                <td>±±¾©</td>
                 <td>2011-04-13</td>
             </tr>
             <tr>
                 <td>145</td>
                 <td>test001</td>
                 <td>test001@126.com</td>
-                <td>ä¸­çº§ä¼šå‘˜</td>
-                <td>åˆè‚¥</td>
+                <td>ÖĞ¼¶»áÔ±</td>
+                <td>ºÏ·Ê</td>
                 <td>2011-03-27</td>
             </tr>
             <tr>
                 <td>116</td>
                 <td>wuliao</td>
                 <td>wuliao@126.com</td>
-                <td>æ™®é€šä¼šå‘˜</td>
-                <td>å—æ˜Œ</td>
+                <td>ÆÕÍ¨»áÔ±</td>
+                <td>ÄÏ²ı</td>
                 <td>2011-04-01</td>
             </tr>
             <tr>
                 <td>129</td>
                 <td>tired</td>
                 <td>tired@126.com</td>
-                <td>ä¸­çº§ä¼šå‘˜</td>
-                <td>åŒ—äº¬</td>
+                <td>ÖĞ¼¶»áÔ±</td>
+                <td>±±¾©</td>
                 <td>2011-04-06</td>
             </tr>
             <tr>
                 <td>155</td>
                 <td>tiredso</td>
                 <td>tireds0@126.com</td>
-                <td>ä¸­çº§ä¼šå‘˜</td>
-                <td>æ­¦æ±‰</td>
+                <td>ÖĞ¼¶»áÔ±</td>
+                <td>Îäºº</td>
                 <td>2011-04-06</td>
             </tr>
             <tr>
                 <td>131</td>
                 <td>javascript</td>
                 <td>js2011@126.com</td>
-                <td>ä¸­çº§ä¼šå‘˜</td>
-                <td>æ­¦æ±‰</td>
+                <td>ÖĞ¼¶»áÔ±</td>
+                <td>Îäºº</td>
                 <td>2011-04-08</td>
             </tr>
             <tr>
                 <td>1356</td>
                 <td>aaa</td>
                 <td>test@126.com</td>
-                <td>é‡‘å¡ä¼šå‘˜</td>
-                <td>ä¸Šæµ·</td>
+                <td>½ğ¿¨»áÔ±</td>
+                <td>ÉÏº£</td>
                 <td>2018-05-23</td>
             </tr>
             <tr>
                 <td>2563</td>
                 <td>jQuery</td>
                 <td>jQuery@126.com</td>
-                <td>é«˜çº§ä¼šå‘˜</td>
-                <td>åŒ—äº¬</td>
+                <td>¸ß¼¶»áÔ±</td>
+                <td>±±¾©</td>
                 <td>2011-04-12</td>
             </tr>
             <tr>
                 <td>13d2</td>
                 <td>jQuery</td>
                 <td>wer@1d26.com</td>
-                <td>æ™®é€šä¼šå‘˜</td>
-                <td>é‡åº†</td>
+                <td>ÆÕÍ¨»áÔ±</td>
+                <td>ÖØÇì</td>
                 <td>2005-12-10</td>
             </tr> 
             <tr>
                 <td>32433</td>
                 <td>5645</td>
                 <td>235sdfs@126.com</td>
-                <td>é“‚é‡‘å¡ä¼šå‘˜</td>
-                <td>å±±ä¸œ</td>
+                <td>²¬½ğ¿¨»áÔ±</td>
+                <td>É½¶«</td>
                 <td>2010-12-01</td>
             </tr>
         </tbody>

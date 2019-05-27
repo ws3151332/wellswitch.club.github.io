@@ -367,7 +367,7 @@
   </div>
   <div class="text-center">
     <p>Copyright ©<script>var CurrentYear = new Date().getFullYear()
-    document.write(CurrentYear)</script> a theme by themefisher / More Templates <a href="http://www.cssmoban.com/" target="_blank" title="wangshuai">wangshuai</a> - Collect from <a href="http://www.cssmoban.com/" title="wangshuai" target="_blank">网页模板</a></p>
+    document.write(CurrentYear)</script> a theme by themefisher / More Templates <a href="http://www.cssmoban.com/" target="_blank" title="wangshuai">wangshuai</a> - Collect from <a href="http://www.cssmoban.com/" title="wangshuai" target="_blank">wangshuai.com.cn</a></p>
   </div>
 </footer>
 

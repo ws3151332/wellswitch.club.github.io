@@ -56,8 +56,8 @@
             Home
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="index.html">Homepage 1</a>
-            <a class="dropdown-item" href="homepage-2.html">Homepage 2</a>
+            <a class="dropdown-item" href="index.html">Homepage</a>
+            <a class="dropdown-item" href="homepage-2.html">Personal Room</a>
           </div>
         </li>
         <li class="nav-item">
@@ -136,8 +136,7 @@
           <div class="card-img-overlay">
             <div class="card-content">
               <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">月上柳梢头，人约黄昏后。</a></h4>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>

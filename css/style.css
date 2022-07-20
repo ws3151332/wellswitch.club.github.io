@@ -838,5 +838,67 @@ blockquote {
 .tag-list li a:hover {
   color: #ff6f00;
 }
+@charset "utf-8";
+/* CSS Document */
+
+/*
+
+*{
+	padding: 0;
+	margin: 0;
+}
+*/
+
+/*h1{color:blue}*/
+
+.box{
+  width: 750px;
+  height: 1100px;
+  margin: auto;		/*外边距：居中对齐*/
+  background-color:#F7F8FB;	/*背景颜色*/
+  border: solid 2px #0CF;/*设置边框样式*/
+}
+
+
+.wl:hover{		/*伪类选择器，当鼠标滑过时执行效果*/
+  /*	background:#F2CB51;*/
+  opacity: 0.5;/* 透明度0.5 */
+
+}
+.wl2:hover{
+  /*	background:#D52FE5;*/
+  opacity: 0.5;/* 透明度0.5 */
+
+}
+
+.item:hover{
+  opacity: 0.5;/* 透明度0.5 */
+
+}
+
+#tx:hover{
+  opacity: 0.5;/* 透明度0.5 */
+  transform: scale(1.2,1.2);/*鼠标滑过变大1.2倍 */
+}
+
+a{
+  display: block;			/*转成块状元素*/
+  width: 150px;			/*设置固定显示的宽度*/
+  white-space: nowrap;	/*不换行，强制在一行内显示*/
+  text-overflow: ellipsis;/*文本溢出是显示省略标记……*/
+  overflow: hidden;	/*设置溢出内容为隐藏*/
+  text-decoration: none;/*取消超链接的下划线效果	*/
+
+}
+
+
+#jn {
+  /*	技能原图片大小：981*324 ，现在 等比例缩放0.5倍 */
+  width: 491px;
+  height: 162px;
+}
+
+
+
 
 /*# sourceMappingURL=maps/style.css.map */
